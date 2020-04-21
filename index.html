@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html langr="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Corona Hunter</title>
+  <link rel="shortcut icon" href="static/assets/icon/flaticon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="static/css/font-awesome.css"/>
+  <link rel="stylesheet" type="text/css" href="static/css/corona_hunter.css">
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="static/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="static/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Corona Hunter">
+  <link rel="apple-touch-icon" href="static/assets/icon/icon-128x128.png">
+  <meta name="description" content="A tracking app for possible spots of corona">
+  <meta name="theme-color" content="#0984e3" />
+</head>
+
+<body>
+  <div data-target='#sideMenu1' onclick = 'sideNavOpenOrClose()' id='sideButton'> <span></span><span></span> <span></span> </div>
+  <div id ='sideMenu1' class='sidenav animated barry-allen shadow'>
+    <div class='background'>
+      <img draggable="false" src='static/assets/images/background-nav-user.jpg' />
+      <div class='user-informations'><h3>Corona Hunter</h3></div>
+    </div>
+    <div class="list-group">
+      <a href="../noticias/templates/index.html" class="list-group-item list-group-item-action"> <i class="fas fa-newspaper"></i> Notícias </a>
+      <a href="../dados/templates/index.html" class="list-group-item list-group-item-action"> <i class="fas fa-swatchbook"></i> Dados </a>
+      <a href="{% url 'sintese:home' %}" class="list-group-item list-group-item-action"> <i class="fas fa-chart-line"></i> Estatísicas </a>
+      <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Home Office</a>
+      <a href="#" class="list-group-item list-group-item-action"> <i class="fas fa-lock"></i>Segurança</a>
+      <a href="#" class="list-group-item list-group-item-action"> <i class="fas fa-wifi"></i>Conectividade</a>
+      <a href="#" class="list-group-item list-group-item-action"> <i class="fas fa-bookmark"></i>Organização</a>
+      <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Mais dicas</a>
+      <a href="#" class="list-group-item list-group-item-action"> <i class="fas fa-chalkboard-teacher"></i>E-learning / Home Scholling</a>
+      <a href="#" class="list-group-item list-group-item-action"> <i class="fas fa-heartbeat"></i>Saúde</a>
+      <a href="#" class="list-group-item list-group-item-action mb-3"> <i class="fas fa-gamepad"></i>Jogos eletrônicos</a>
+    </div>
+  </div>
+  <div class='outside' data-target='#sideMenu1' onclick = 'sideNavOpenOrClose()'></div>
+
+  <nav class="navbar fixed-top navbar-expand-lg bg-primary">
+    <div class="container">
+      <a class='titulo'> Título </a> 
+    </div>
+  </nav>
+  <main class="container" style='padding-top : 65px'>
+    <div class="alert alert-info" role="alert">
+      Em breve...
+    </div>
+
+    <div class="container">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/assets/images/hand.png" alt="Como lavar suas mãos">
+        <div class="card-body">
+          <h5 class="card-title">Salve vidas</h5>
+          <p class="card-text">          <p class="card-text">Higienização Simples das Mãos.</p></p>
+          <a href="http://www.anvisa.gov.br/servicosaude/controle/higienizacao_simplesmao.pdf" class="btn btn-primary">Veja como</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand text-white" href="#">© Ciência da Computação 2020</a>
+  </nav>
+
+</body>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+</script>
+<script src="install.js"></script>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/corona_hunter.js"></script>
+<script src="static/js/bootstrap.bundle.min.js' %}"></script>
+</html>
