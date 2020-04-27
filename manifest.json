@@ -1,6 +1,6 @@
 {
-    "name": "Weather",
-    "short_name": "Weather",
+    "name": "Corona Hunter",
+    "short_name": "Hunter",
     "icons": [{
       "src": "static/assets/icon/icon-128x128.png",
         "sizes": "128x128",
